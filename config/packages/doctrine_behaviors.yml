@@ -1,0 +1,9 @@
+imports:
+    - { resource: ../../vendor/knplabs/doctrine-behaviors/config/orm-services.yml }
+
+knp_doctrine_behaviors:
+    blameable:      false
+    geocodable:     ~     # Here null is converted to false
+    loggable:       ~
+    sluggable:      true
+    soft_deletable: true

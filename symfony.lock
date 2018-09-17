@@ -89,6 +89,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "keskinbu/php-github-api": {
+        "version": "1.0.0"
+    },
     "knplabs/doctrine-behaviors": {
         "version": "1.5.0"
     },
@@ -394,6 +397,9 @@
     },
     "twig/twig": {
         "version": "v2.5.0"
+    },
+    "vlucas/phpdotenv": {
+        "version": "v2.5.1"
     },
     "webmozart/assert": {
         "version": "1.3.0"

@@ -15,15 +15,15 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return new JsonResponse();
-        $token = new ApiToken();
+//        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+
+        $token = new ApiToken('ac9ce13d9a3cd7251792e685334caecf82766152');
         $client = new Client($token);
 
-        return new JsonResponse(json_decode($client->user()->events('keskinbu'), true));
+        $events = $client->user()->events('keskinbu');
 
-
-//        return $this->render('home/index.html.twig', [
-//            'controller_name' => 'HomeController',
-//        ]);
+        return $this->render('home/index.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
     }
 }

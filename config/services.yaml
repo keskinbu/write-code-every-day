@@ -30,8 +30,8 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    App\Service\GithubAuthService:
+    my.oauth_aware.user_provider.service:
+        class: App\Security\FOSUBUserProvider
         arguments:
-            - "%env(GITHUB_CLIENT_ID)%"
-            - "%env(GITHUB_CLIENT_SECRET)%"
-            - "%env(GITHUB_REDIRECT_URL)%"
+            - '@fos_user.user_manager.default'
+            - { github: githubId }
